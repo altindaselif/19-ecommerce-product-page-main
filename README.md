@@ -46,7 +46,9 @@ The lightbox gallery is great for desktops but terrible for mobile UX.
 
 ## 📸 Screenshots
 
-| ![Desktop](./desktop-screenshot.png) | ![Tablet](./tablet-screenshot.png) | ![Mobile](./mobile-screenshot.png) |
+- [View Desktop Version](./desktop-screenshot.png)
+- [View Tablet Version](./tablet-screenshot.png)
+- [View Mobile Version](./mobile-screenshot.png)
 
 ## 🧰 Built With
 
