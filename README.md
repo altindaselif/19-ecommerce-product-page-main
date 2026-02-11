@@ -10,8 +10,8 @@ This is an E-Commerce Product Page that you can use on your websites.
 
 ## Links
 
-- **GitHub Repository:** [View Code](https://github.com/altindaselif/newsletter-sign-up-with-success-message-main)
-- **Live Demo:** [View Live Site](https://altindaselif.github.io/newsletter-sign-up-with-success-message-main/)
+- **GitHub Repository:** [View Code](https://github.com/altindaselif/19-ecommerce-product-page-main)
+- **Live Demo:** [View Live Site](https://altindaselif.github.io/19-ecommerce-product-page-main/)
 
 ## Built With
 
