@@ -88,8 +88,6 @@ const updateDropdown = (newAmount) => {
     headerCartCount.classList.remove("active");
   }
   if (newAmount > 0) {
-    currentAmount = newAmount;
-
     dropdownFullContainer.classList.add("active");
     headerCartCount.classList.add("active");
 
@@ -150,7 +148,11 @@ lightboxSideImageButtons.forEach((button, index) => {
 
 /* 3. Lightbox Toggle Listeners */
 mainImages.forEach((image) => {
-  image.addEventListener("click", toggleLightboxOverlay);
+  image.addEventListener("click", () => {
+    if (window.innerWidth > 768) {
+      toggleLightboxOverlay();
+    }
+  });
 });
 
 lightboxCloseButton.addEventListener("click", toggleLightboxOverlay);
@@ -177,9 +179,6 @@ addCartButton.addEventListener("click", () => {
 headerCartButton.addEventListener("click", toggleDropdownContainer);
 
 deleteButton.addEventListener("click", () => {
-  currentAmount = 0;
-
   updateDropdown(0);
-
   updateAmount(0);
 });
