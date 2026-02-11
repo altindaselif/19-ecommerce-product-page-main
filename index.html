@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>E-Commerce Product Page</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="page-container">
+      <header class="header-container">
+        <div class="header-logo-container">
+          <button class="header-menu-open-button hidden">
+            <img
+              class="header-menu-open-icon"
+              src="images/icon-menu.svg"
+              alt="Menu Open Icon"
+            />
+          </button>
+          <img class="header-img" src="images/logo.svg" alt="Website Logo" />
+        </div>
+        <nav class="header-navbar">
+          <button class="navbar-menu-close-button hidden">
+            <img
+              class="header-menu-close-icon"
+              src="images/icon-close.svg"
+              alt="Menu Close Icon"
+            />
+          </button>
+          <a class="navbar-link" href="#">Collections</a>
+          <a class="navbar-link" href="#">Men</a>
+          <a class="navbar-link" href="#">Women</a>
+          <a class="navbar-link" href="#">About</a>
+          <a class="navbar-link" href="#">Contact</a>
+        </nav>
+        <div class="header-personal">
+          <button class="header-cart-button">
+            <img
+              class="header-cart-icon"
+              src="images/icon-cart.svg"
+              alt="Cart Icon"
+            />
+            <span class="header-cart-count hidden">3</span>
+          </button>
+          <button class="header-profile-button">
+            <img
+              class="header-profile-img"
+              src="images/image-avatar.png"
+              alt="Profile Picture"
+            />
+          </button>
+          <div class="dropdown-container hidden">
+            <div class="dropdown-header">
+              <h3 class="dropdown-title">Cart</h3>
+            </div>
+            <div class="dropdown-main">
+              <div class="dropdown-empty-container hidden">
+                <p class="dropdown-empty-text">Your cart is empty.</p>
+              </div>
+              <div class="dropdown-full-container hidden">
+                <div class="dropdown-item">
+                  <img
+                    class="item-img"
+                    src="images/image-product-1-thumbnail.jpg"
+                    alt="Product Image"
+                  />
+                  <div class="item-details">
+                    <p class="item-name">Fall Limited Edition Sneakers</p>
+                    <p class="item-price">
+                      $125.00 x <span class="item-count">3</span>
+                      <strong class="item-price-total">$375.00</strong>
+                    </p>
+                  </div>
+                  <button class="item-delete-button">
+                    <img
+                      class="item-delete-img"
+                      src="images/icon-delete.svg"
+                      alt="Delete Icon"
+                    />
+                  </button>
+                </div>
+                <button class="item-checkout-button">Checkout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main-container">
+        <section class="gallery-container">
+          <div class="main-img-container">
+            <button class="main-img-previous-button hidden">
+              <svg
+                class="main-img-arrow-icon"
+                width="12"
+                height="18"
+                viewBox="0 0 12 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 1 3 9l8 8"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div class="img-slider-track">
+              <img
+                class="main-img active"
+                src="images/image-product-1.jpg"
+                alt="Product Image 1"
+              />
+              <img
+                class="main-img"
+                src="images/image-product-2.jpg"
+                alt="Product Image 2"
+              />
+              <img
+                class="main-img"
+                src="images/image-product-3.jpg"
+                alt="Product Image 3"
+              />
+              <img
+                class="main-img"
+                src="images/image-product-4.jpg"
+                alt="Product Image 4"
+              />
+            </div>
+            <button class="main-img-next-button hidden">
+              <svg
+                class="main-img-arrow-icon"
+                width="13"
+                height="18"
+                viewBox="0 0 13 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m2 1 8 8-8 8"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="side-imgs-container">
+            <button class="side-img-button active">
+              <img
+                class="side-img"
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Product Image"
+              />
+            </button>
+            <button class="side-img-button">
+              <img
+                class="side-img"
+                src="images/image-product-2-thumbnail.jpg"
+                alt="Product Image"
+              />
+            </button>
+            <button class="side-img-button">
+              <img
+                class="side-img"
+                src="images/image-product-3-thumbnail.jpg"
+                alt="Product Image"
+              />
+            </button>
+            <button class="side-img-button">
+              <img
+                class="side-img"
+                src="images/image-product-4-thumbnail.jpg"
+                alt="Product Image"
+              />
+            </button>
+          </div>
+        </section>
+        <section class="details-container">
+          <span class="details-span">Sneaker Company</span>
+          <h1 class="details-title">Fall Limited Edition Sneakers</h1>
+          <p class="details-text">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price-container">
+            <div class="price-new-container">
+              <p class="price-new">$125.00</p>
+              <p class="price-discount">50%</p>
+            </div>
+            <p class="price-old">$250.00</p>
+          </div>
+          <div class="buttons-container">
+            <div class="amount-container">
+              <button class="minus-button">
+                <img
+                  class="button-icon"
+                  src="images/icon-minus.svg"
+                  alt="Minus Icon"
+                />
+              </button>
+              <p class="amount-info">0</p>
+              <button class="plus-button">
+                <img
+                  class="button-icon"
+                  src="images/icon-plus.svg"
+                  alt="Plus Icon"
+                />
+              </button>
+            </div>
+            <button class="add-cart-button">
+              <img
+                class="add-cart-icon"
+                src="images/icon-cart.svg"
+                alt="Cart Icon"
+              />
+              <p class="add-cart-text">Add to cart</p>
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="lightbox-overlay hidden">
+      <div class="lightbox-container">
+        <button class="lightbox-close-button">
+          <svg
+            class="lightbox-close-icon"
+            width="14"
+            height="15"
+            viewBox="0 0 14 15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <div class="lightbox-main-img-container">
+          <button class="lightbox-previous-button">
+            <svg
+              class="lightbox-arrow-icon"
+              width="12"
+              height="18"
+              viewBox="0 0 12 18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 1 3 9l8 8"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <img
+            class="lightbox-main-img active"
+            src="images/image-product-1.jpg"
+            alt="Product 1"
+          />
+          <img
+            class="lightbox-main-img"
+            src="images/image-product-2.jpg"
+            alt="Product 2"
+          />
+          <img
+            class="lightbox-main-img"
+            src="images/image-product-3.jpg"
+            alt="Product 3"
+          />
+          <img
+            class="lightbox-main-img"
+            src="images/image-product-4.jpg"
+            alt="Product 4"
+          />
+          <button class="lightbox-next-button">
+            <svg
+              class="lightbox-arrow-icon"
+              width="13"
+              height="18"
+              viewBox="0 0 13 18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m2 1 8 8-8 8"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="lightbox-side-imgs-container">
+          <button class="lightbox-side-img-button">
+            <img
+              class="lightbox-side-img"
+              src="images/image-product-1-thumbnail.jpg"
+              alt="Thumbnail 1"
+            />
+          </button>
+          <button class="lightbox-side-img-button">
+            <img
+              class="lightbox-side-img"
+              src="images/image-product-2-thumbnail.jpg"
+              alt="Thumbnail 2"
+            />
+          </button>
+          <button class="lightbox-side-img-button">
+            <img
+              class="lightbox-side-img"
+              src="images/image-product-3-thumbnail.jpg"
+              alt="Thumbnail 3"
+            />
+          </button>
+          <button class="lightbox-side-img-button">
+            <img
+              class="lightbox-side-img"
+              src="images/image-product-4-thumbnail.jpg"
+              alt="Thumbnail 4"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
