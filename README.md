@@ -1,12 +1,10 @@
 # E-Commerce Product Page 👟
 
-A fully responsive, interactive e-commerce product page built with **Vanilla JavaScript**. This project focuses on complex DOM manipulation, state management logic, and accessibility standards without relying on external libraries or frameworks.
+A responsive e-commerce product page built with **Vanilla JavaScript**. This project focuses on DOM manipulation and state logic without relying on external libraries.
 
 ## 🚀 Overview
 
-The goal of this project was to build a functional product page that mirrors real-world e-commerce complexity. It features a dynamic lightbox gallery, a cart management system with logic synchronization, and a mobile-first responsive layout.
-
-This project demonstrates my ability to handle **state management** (shopping cart logic) and **responsive UI components** using pure JavaScript and CSS.
+The goal was to build a functional product page with a cart system, image gallery and responsive layout. The project handles state synchronization between the cart and the main display using pure JavaScript.
 
 ## 🔗 Links
 
@@ -15,34 +13,25 @@ This project demonstrates my ability to handle **state management** (shopping ca
 
 ## 💡 Key Features
 
-- **🛒 Smart Cart System:** dynamic add/remove functionality with real-time calculations.
-- **🖼️ Lightbox Gallery:** Desktop-specific modal gallery with thumbnail synchronization.
-- **📱 Mobile Image Slider:** Touch-friendly slider optimized for smaller screens.
-- **🔢 Logic Synchronization:** Cart quantity updates are synchronized across the UI (Main display & Cart dropdown).
-- **♿ Accessibility First:** Full ARIA label support, semantic HTML5, and keyboard navigability.
-- **📱 Fluid Design:** Adaptive layout that prevents overflow on all devices.
+- **🛒 Cart Logic:** Add/remove functionality with synchronized quantity updates.
+- **🖼️ Desktop Lightbox:** Modal gallery that only activates on larger screens (>768px).
+- **📱 Mobile Slider:** Button-controlled image slider for smaller screens.
+- **🔢 State Synchronization:** Cart quantity is controlled by a single source of truth to prevent UI mismatches.
+- **📐 Responsive Design:** Adapts to different screen sizes using CSS Grid and Flexbox.
 
-## 🛠️ Technical Highlights (What I Learned)
+## 🛠️ Technical Implementation
 
-This project was a deep dive into **JavaScript Logic** and **CSS Architecture**. Here are the key engineering decisions I made:
+### 1. Centralized State Management
 
-### 1. State Management & Logic Isolation
+To prevent bugs where the cart count didn't match the actual items, I separated the logic from the UI.
 
-Instead of updating the DOM from multiple functions (which causes bugs), I implemented a **"Single Source of Truth"** approach for the cart state.
+- **Solution:** A central `updateAmount()` function controls the state, while `updateDropdown()` only handles the rendering. This ensures the cart and main display are always in sync.
 
-- **Problem:** Updating the cart count from both the "Add" button and the "Delete" button caused synchronization issues.
-- **Solution:** I separated the `updateAmount()` (logic) from `updateDropdown()` (UI rendering). The state variable `currentAmount` is controlled centrally, preventing logic mismatches.
+### 2. Conditional Event Listeners
 
-### 2. Mobile Optimization & Conditional Events
+The lightbox gallery is designed for desktop interaction.
 
-The lightbox gallery is great for desktops but terrible for mobile UX.
-
-- **Solution:** I implemented a `window.innerWidth` check within the event listeners. The lightbox script only activates on screens wider than **768px**, ensuring mobile users get a native slider experience instead of a broken modal.
-
-### 3. Robust CSS Architecture
-
-- **Fluid Layouts:** Used `width: min(36rem, 95vw)` for the cart dropdown to ensure it never overflows the screen on small mobile devices.
-- **Z-Index Hierarchy:** Established a strict z-index layering system (Lightbox > Mobile Menu > Overlay > Cart) to prevent visual stacking context errors.
+- **Solution:** Implemented a `window.innerWidth` check. The lightbox script only executes on screens wider than **768px**, preventing UX issues on mobile devices.
 
 ## 📸 Screenshots
 
@@ -52,11 +41,11 @@ The lightbox gallery is great for desktops but terrible for mobile UX.
 
 ## 🧰 Built With
 
-- **Semantic HTML5** - For SEO and Accessibility structure.
-- **CSS3 (Custom Properties)** - For consistent theming and maintainability.
-- **Flexbox & CSS Grid** - For complex layout alignments.
-- **Vanilla JavaScript (ES6+)** - For all interactive logic (No jQuery or Plugins).
-- **BEM Naming Convention** - For clean and scalable CSS classes.
+- **Semantic HTML5**
+- **CSS3 (Custom Properties)**
+- **Flexbox & CSS Grid**
+- **Vanilla JavaScript (ES6+)**
+- **Desktop-First Workflow**
 
 ## ✍️ Author
 
